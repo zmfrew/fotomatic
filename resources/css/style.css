@@ -8,7 +8,6 @@ html {
 .main-content {
   position: relative;
   top: 5.3125rem; /* To offset for fixed header. */
-  
 }
 
 .center {
@@ -27,6 +26,7 @@ html {
 
 .image-container img {
   display: block;
+  width: 100%;
 }
 
 @media only screen and (max-width: 760px) {
@@ -39,19 +39,24 @@ html {
 
 header {
   position: fixed;
+  display: flex;
   width: 100%;
   border-bottom: solid 1px #c6c1c1;
   background-color: white;
+  height: 85px;
+  z-index: 1;
 }
 
 header .content {
   display: flex;
   align-items: center;
   padding: 1.875rem;
+  width:100%;
 }
 
 header .logo {
   flex: 1;
+  text-align: left;
 }
 
 header nav ul {
@@ -74,8 +79,12 @@ header .icon {
   padding-left: .75rem;
 }
 
-header .mobile {
+nav.mobile {
   display: none;
+}
+
+a.desktop.logo {
+  color: black;
 }
 
 @media only screen and (max-width: 760px) {
@@ -118,6 +127,11 @@ header .mobile {
   justify-content: flex-start;
   align-items: flex-start;
   height: 43.5rem;
+  background-image:
+    url("../../resources/images/banner-landingpage.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 #sign-up-cta {
@@ -125,6 +139,9 @@ header .mobile {
   border: solid 1px #979797;
   border-radius: 4px;
   background-color: #9dc20b;
+  position: relative;
+  top: 170px;
+  left: 100px;
 }
 
 #sign-up-cta .content {
@@ -232,6 +249,7 @@ header .mobile {
 
 .feature h2 {
   padding-bottom: .5rem;
+  margin-top: 40px;
   font-size: 2.25rem;
   font-weight: bold;
   color: #4a4a4a;
@@ -242,6 +260,7 @@ header .mobile {
   line-height: 1.2;
   font-weight: 300;
   color: #4a4a4a;
+  padding-bottom: 2.45rem;
 }
 
 @media only screen and (max-width: 890px) {
@@ -297,6 +316,15 @@ header .mobile {
 #filters-section .images-container {
   max-width: 100%;
   padding: 0 1%;
+  display: inline-flex;
+}
+
+.image-container {
+  width: 24.5%;
+}
+
+#filters-section .image-container img {
+  width: 100%;
 }
 
 @media only screen and (max-width: 760px) {
@@ -335,11 +363,11 @@ header .mobile {
   background-color: #f3f3f3;
 }
 
-#quotes-section content {
+#quotes-section .content.center {
   padding: 5rem 0;
 }
 
-#quotes-section quote {
+#quotes-section .quote {
   padding-right: 1.875rem;
   font-family: "Palatino", serif;
   font-size: 1.875rem;
@@ -374,12 +402,29 @@ header .mobile {
 footer {
   background-color: #9b9b9b;
   padding: 1.5rem 2rem;
+  height: 1.5rem;
+  display: flex;
 }
 
 footer .content {
   color: white;
   display: flex;
-  font-size: .75rem;
+  font-size: 1rem;
+  align-items: center;
+  font-family: Roboto-Regular;
+  font-weight: bold;
+}
+
+.content {
+  width: 100%;
+}
+
+div span.copyright {
+  text-align: left;
+}
+
+div span.location {
+  text-align: right;
 }
 
 footer .copyright {
